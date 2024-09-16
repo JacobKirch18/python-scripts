@@ -4,14 +4,13 @@
 #prints the number of people with the same first name
 #remove final instance .split() to use full names
 
+from sys import stdin
+
 strings = []
 names = {}
 
-while True:
-    try:
-        strings.append(input())
-    except EOFError:
-        break
+for line in stdin:
+    strings.append(line)
 
 for string in strings:
     parts = string.split(":")
